@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", san-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #171d2e;
+  overflow: hidden;
+}
+
+input {
+  border: 0.2rem solid #0c9bfa;
+  font-size: 2rem;
+  padding: 2rem 3.5rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  background: #171d2e;
+}
+
+input:focus {
+  outline: none;
+}
+
+div {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: #171d2e;
+  color: #fff;
+  transition: all 250ms linear;
+  pointer-events: none;
+}
+
+input:focus ~ label,
+input:not(:focus):valid ~ label {
+  transform: translateY(50%);
+  top: -35%;
+  left: 1rem;
+  font-size: 1.25rem;
+  padding: 0.3rem;
+}
